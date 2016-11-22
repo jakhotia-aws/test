@@ -1,0 +1,10 @@
+---
+  - hosts: [ aws-instances ]
+    remote_user: ec2-user
+    become: sudo
+     tasks:
+       - name: installing and updating
+         command: yum update -y
+       - name: install
+         command: yum install docker -y
+...
